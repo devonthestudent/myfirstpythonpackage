@@ -9,7 +9,7 @@ classifiers = [
  
 setup(
   name='myfirstpythonpackage',
-  version='0.0.1',
+  version='0.0.2',
   description='first trial',
   #long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
   long_description = open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),

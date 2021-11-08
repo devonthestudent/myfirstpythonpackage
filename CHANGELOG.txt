@@ -3,6 +3,12 @@ change log
 
 version 0.0.1 (11/07/2021)
 -----------------------------------
-- initial release
+- planning
 testing python package functionlity
+-----------------------------------
+
+version 0.0.2 (11/07/2021)
+-----------------------------------
+- planning
+more testing
 -----------------------------------
