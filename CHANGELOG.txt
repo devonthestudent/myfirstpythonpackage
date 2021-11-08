@@ -7,8 +7,9 @@ version 0.0.1 (11/07/2021)
 testing python package functionlity
 -----------------------------------
 
-version 0.0.2 (11/07/2021)
+version 0.0.3 (11/08/2021)
 -----------------------------------
 - planning
-more testing
+added cython_part
+added cython compiler
 -----------------------------------

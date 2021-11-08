@@ -1,5 +1,10 @@
 from setuptools import setup, find_packages
- 
+from distutils.extension import Extension
+from Cython.Distutils import build_ext
+import numpy
+from Cython.Build import cythonize
+
+
 classifiers = [
   'Development Status :: 1 - Planning',
   'Intended Audience :: Education',
@@ -9,7 +14,7 @@ classifiers = [
  
 setup(
   name='myfirstpythonpackage',
-  version='0.0.2',
+  version='0.0.3',
   description='first trial',
   #long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
   long_description = open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
@@ -20,6 +25,14 @@ setup(
   classifiers=classifiers,
   keywords='trial', 
   packages=find_packages(),
-  install_requires=[''],
+  cmdclass = {'build_ext': build_ext},
+    ext_modules = cythonize(
+                        [Extension("myfirstpythonpackage.cython_part._cython_code",
+                                  ["myfirstpythonpackage/cython_part/_cython_code.pyx"],
+                                       include_dirs = [numpy.get_include()])],
+                        compiler_directives={'language_level' : "3"}
+                        ),
+    
+  requires=  ['numpy','Cython','scipy'],
  # extras_require = { "dev":["pytest>=3.7",],},
 )

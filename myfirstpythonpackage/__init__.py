@@ -1,2 +1,3 @@
-def dosomething(num1 = 0, num2 =3):
-    print("look at me, I'm doing something", num1 +num2)
+__author__ = 'Chenyu'
+from myfirstpythonpackage.object_two import Two
+from myfirstpythonpackage.cython_part._cython_code import fib_cpdef
